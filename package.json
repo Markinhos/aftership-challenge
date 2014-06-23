@@ -15,10 +15,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/aftership/challenge"
+		"url": "https://github.com/Markinhos/challenge"
 	},
 	"bugs": {
-		"url": "https://github.com/aftership/challenge/issues"
+		"url": "https://github.com/Markinhos/challenge/issues"
 	},
 	"dependencies": {
 		"mocha": "latest",
