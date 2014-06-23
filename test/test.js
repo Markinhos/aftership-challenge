@@ -21,6 +21,8 @@ describe('Test: .is', function() {
 		};
 		it('Expect return true', function(done) {
 			var result = Courier.usps('9405903699300184125060', function(err, result){
+				if(err) done(err);
+				
 				result.should.eql(usps);
 				done();
 			});
