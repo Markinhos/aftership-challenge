@@ -45,7 +45,7 @@ describe('Test: .is', function() {
 			]
 		};
 
-		it('Expect return true', function(done) {
+		it.skip('Expect return true', function(done) {
 
 			this.timeout(10000);
 
@@ -122,9 +122,14 @@ describe('Test: .is', function() {
 		]
 		};
 
-		it.skip('Expect return true', function() {
-			var result = Courier.dpduk('15502370264989N');
-			result.should.eql(dpduk);
+		it('Expect return true', function(done) {
+
+			var result = Courier.dpduk('15502370264989N', function(err, result){
+				if(err) done(err);
+
+				result.should.eql(dpduk);
+				done();
+			});
 		});
 	});
 });
