@@ -123,7 +123,7 @@ describe('Test: .is', function() {
 		};
 
 		it('Expect return true', function(done) {
-
+			this.timeout(10000);
 			var result = Courier.dpduk('15502370264989N', function(err, result){
 				if(err) done(err);
 
