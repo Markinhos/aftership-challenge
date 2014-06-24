@@ -19,7 +19,7 @@ describe('Test: .is', function() {
 				}
 			]
 		};
-		it.skip('Expect return true', function(done) {
+		it('Expect return true', function(done) {
 			var result = Courier.usps('9405903699300184125060', function(err, result){
 				if(err) done(err);
 
@@ -45,7 +45,7 @@ describe('Test: .is', function() {
 			]
 		};
 
-		it.skip('Expect return true', function(done) {
+		it('Expect return true', function(done) {
 
 			this.timeout(10000);
 
