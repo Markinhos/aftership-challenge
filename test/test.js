@@ -19,10 +19,10 @@ describe('Test: .is', function() {
 				}
 			]
 		};
-		it('Expect return true', function(done) {
+		it.skip('Expect return true', function(done) {
 			var result = Courier.usps('9405903699300184125060', function(err, result){
 				if(err) done(err);
-				
+
 				result.should.eql(usps);
 				done();
 			});
@@ -33,51 +33,28 @@ describe('Test: .is', function() {
 	// Hints: There is no official API from hongkongpost, but you may use web or other method to get the result easily.
 	// Time need: less than an hour if you find the correct way
 
-	describe('Track @ hkpost(\'CP889331175HK\')', function() {
+	describe('Track @ hkpost(\'LK059460815HK\')', function() {
 
 		var hkpost = {
 			checkpoints: [
 				{
-					country_name: 'HK',
-					message: 'Item posted.',
-					checkpoint_time: '2013-12-11T00:00:00'
-				},
-				{
-					country_name: 'HK',
-					message: 'In transit.',
-					checkpoint_time: '2013-12-12T00:00:00'
-				},
-				{
-					country_name: 'HK',
-					message: 'Processed for departure.',
-					checkpoint_time: '2013-12-13T00:00:00'
-				},
-				{
-					country_name: 'HK',
-					message: 'The item left Hong Kong for its destination on  19-Dec-2013 ',
-					checkpoint_time: '2013-12-17T00:00:00'
-				},
-				{
-					country_name: 'NZ',
-					message: 'Arrived.',
-					checkpoint_time: '2014-01-14T00:00:00'
-				},
-				{
-					country_name: 'NZ',
-					message: 'In transit.',
-					checkpoint_time: '2014-01-15T00:00:00'
-				},
-				{
-					country_name: 'NZ',
+					country_name: 'US',
 					message: 'Delivered.',
-					checkpoint_time: '2014-01-16T00:00:00'
+					checkpoint_time: '2014-05-27T00:00:00'
 				}
 			]
 		};
 
-		it.skip('Expect return true', function() {
-			var result = Courier.hkpost('CP889331175HK');
-			result.should.eql(hkpost);
+		it('Expect return true', function(done) {
+
+			this.timeout(10000);
+
+			var result = Courier.hkpost('LK059460815HK', function(err, result){
+				if(err) done(err);
+
+				result.should.eql(hkpost);
+				done();
+			});
 		});
 	});
 
