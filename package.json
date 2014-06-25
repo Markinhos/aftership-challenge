@@ -1,37 +1,42 @@
 {
-	"name": "aftership-challenge",
-	"version": "1.0.0",
-	"private": true,
-	"description": "Get Tracking info from Courier",
-	"main": "./lib/index",
-	"engines": {
-		"node": ">=0.8"
-	},
-	"directories": {
-		"lib": "./lib"
-	},
-	"scripts": {
-		"test": "mocha --recursive -R spec"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Markinhos/challenge"
-	},
-	"bugs": {
-		"url": "https://github.com/Markinhos/challenge/issues"
-	},
-	"dependencies": {
-		"mocha": "latest",
-		"underscore": "latest",
-		"should": "latest"
-	},
-	"devDependencies": {
-		"mocha": "latest",
-		"should": "latest"
-	},
-	"keywords": [
-		"courier"
-	],
-	"author": "AfterShip",
-	"license": "MIT"
+  "name": "aftership-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Get Tracking info from Courier",
+  "main": "./lib/index",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "test": "mocha --recursive -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Markinhos/challenge"
+  },
+  "bugs": {
+    "url": "https://github.com/Markinhos/challenge/issues"
+  },
+  "dependencies": {
+    "mocha": "latest",
+    "underscore": "latest",
+    "should": "latest",
+    "xml2js": "~0.4.4",
+    "dateformat": "~1.0.8-1.2.3",
+    "cheerio": "~0.17.0",
+    "country-data": "0.0.13",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "should": "latest"
+  },
+  "keywords": [
+    "courier"
+  ],
+  "author": "AfterShip",
+  "license": "MIT"
 }
