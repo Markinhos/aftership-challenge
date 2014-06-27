@@ -8,11 +8,11 @@ describe('Test: .is', function() {
 	// Hints: You can apply the API from their web site
 	// Time need: less than an hour if you have the api key
 
-	describe.skip('Track @ usps', function() {
+	describe('Track @ usps', function() {
 
 		var tests = require('./test_data/usps').tests;
 
-		for(x in tests){
+		for(var x in tests){
 			it('Expect ' + tests[x].tracking_num + ' return true', function(done) {
 				var result = Courier.usps(tests[x].tracking_num, '461APPLE6863', function(err, result){
 					if(err) done(err);
@@ -28,22 +28,12 @@ describe('Test: .is', function() {
 	// Hints: There is no official API from hongkongpost, but you may use web or other method to get the result easily.
 	// Time need: less than an hour if you find the correct way
 
-	describe.skip('Track @ hkpost', function() {
-
-		var hkpost = {
-			checkpoints: [
-				{
-					country_name: 'US',
-					message: 'Delivered.',
-					checkpoint_time: '2014-05-27T00:00:00'
-				}
-			]
-		};
+	describe('Track @ hkpost', function() {
 
 		var tests = require('./test_data/hkpost').tests;
 
 
-		for(x in tests){
+		for(var x in tests){
 			it('Expect ' + tests[x].tracking_num + ' return true', function(done) {
 				this.timeout(10000);
 				var result = Courier.hkpost(tests[x].tracking_num, function(err, result){
@@ -63,7 +53,7 @@ describe('Test: .is', function() {
 
 		var tests = require('./test_data/dpduk').tests;
 
-		for(x in tests){
+		for(var x in tests){
 			it('Expect ' + tests[x].tracking_num + ' return true', function(done) {
 				this.timeout(10000);
 				var result = Courier.dpduk(tests[x].tracking_num, function(err, result){
